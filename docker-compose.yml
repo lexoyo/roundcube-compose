@@ -11,7 +11,6 @@ services:
       - 5432
       - 3306
     environment:
-      - MYSQL_ROOT_PASSWORD=roundcube-mysql-pw
       - MYSQL_DATABASE=roundcubemail
 
   roundcubemail:
@@ -29,10 +28,7 @@ services:
     environment:
       - ROUNDCUBEMAIL_DB_TYPE=mysql
       - ROUNDCUBEMAIL_DB_HOST=roundcubedb
-      - ROUNDCUBEMAIL_DB_PASSWORD=roundcube-mysql-pw
       - ROUNDCUBEMAIL_SKIN=elastic
-      - ROUNDCUBEMAIL_DEFAULT_HOST=tls://mail.example.org
-      - ROUNDCUBEMAIL_SMTP_SERVER=tls://mail.example.org
 
 ### Optional: add a full mail server stack to use with Roundcube like https://hub.docker.com/r/tvial/docker-mailserver
 #   mailserver:
